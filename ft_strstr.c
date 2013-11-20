@@ -6,8 +6,11 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/19 20:58:18 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/20 22:45:50 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*ft_strstr(const char *s1, const char *s2)
+{
+}
 
