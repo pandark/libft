@@ -6,16 +6,12 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:05:55 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 13:30:26 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/20 15:35:07 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# if __STDC_VERSION__ < 199901L
-#  define /* nothing */
-# endif
 
 #include <stddef.h>
 

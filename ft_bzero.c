@@ -6,8 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:43 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/19 20:54:10 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/20 15:54:38 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
+void	bzero(void *s, size_t n)
+{
+	memset(s, 0, n);
+}
 
