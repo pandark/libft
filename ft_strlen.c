@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/19 17:58:10 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/20 11:26:38 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 size_t	strlen(const char *s)
 {
-	char	*cur;
+	int		len;
 
-	cur = s;
-	while (*cur != '\0')
+	len = 0;
+	while (*(s + len) != '\0')
 	{
-		cur++;
+		len++;
 	}
-	return (size_t)(cur - s);
+	return len;
 }
 
