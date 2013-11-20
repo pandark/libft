@@ -6,13 +6,13 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 11:26:38 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/20 13:25:31 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	int		len;
 
@@ -21,6 +21,6 @@ size_t	strlen(const char *s)
 	{
 		len++;
 	}
-	return len;
+	return (len);
 }
 
