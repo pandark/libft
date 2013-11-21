@@ -6,11 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 22:45:50 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/21 15:22:59 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strstr(const char *s1, const char *s2)
 {
+	(void)s1;
+	(void)s2;
+	return ("");
 }
 
