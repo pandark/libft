@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ref_isalpha.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 13:25:14 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/21 11:08:56 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/21 11:09:27 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main(void)
 {
-	char	*cur;
+	printf("a : %d\n", isalpha('a'));
+	printf("z : %d\n", isalpha('z'));
+	printf("h : %d\n", isalpha('h'));
+	printf("0 : %d\n", isalpha('0'));
+	printf("9 : %d\n", isalpha('9'));
+	printf("4 : %d\n", isalpha('4'));
+	printf("%% : %d\n", isalpha('%'));
+	printf("\\t : %d\n", isalpha('\t'));
+	printf("\\0 : %d\n", isalpha('\0'));
 
-	cur = (char *)s;
-	if (n <= 0)
-	{
-		return (NULL);
-	}
-	while (*cur != c)
-	{
-		if (n <= 0)
-		{
-			return (NULL);
-		}
-		cur++;
-		n--;
-	}
-	return (cur);
+	return (0);
 }
 

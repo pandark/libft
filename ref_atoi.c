@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ref_atoi.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 13:25:14 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/21 11:00:06 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/21 12:35:52 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main(void)
 {
-	char	*cur;
+	printf("%d\n", atoi("0123"));
+	printf("%d\n", atoi("1230"));
+	printf("%d\n", atoi("+5678"));
+	printf("%d\n", atoi("-7890"));
+	printf("%d\n", atoi("-0987"));
+	printf("%d\n", atoi("+--++-7890"));
+	printf("%d\n", atoi("\v\f\t \n-5437"));
 
-	cur = (char *)s;
-	if (n <= 0)
-	{
-		return (NULL);
-	}
-	while (*cur != c)
-	{
-		if (n <= 0)
-		{
-			return (NULL);
-		}
-		cur++;
-		n--;
-	}
-	return (cur);
+	return (0);
 }
 

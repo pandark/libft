@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   test_strlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 13:25:14 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/20 22:27:40 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/21 11:27:24 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main(void)
 {
-	char	*cur;
+	printf("a : %d\n", (int)ft_strlen(""));
+	printf("a : %d\n", (int)ft_strlen("\b"));
+	printf("a : %d\n", (int)ft_strlen("\0"));
+	printf("a : %d\n", (int)ft_strlen("ff\0ff"));
+	printf("a : %d\n", (int)ft_strlen("dhrejre ywteyt"));
+	printf("a : %d\n", (int)ft_strlen("dh\nrej"));
+	printf("a : %d\n", (int)ft_strlen("dhr\tej"));
 
-	cur = (char *)s;
-	if (n <= 0)
-	{
-		return (NULL);
-	}
-	while (*cur != c)
-	{
-		if (n <= 0)
-		{
-			return (NULL);
-		}
-		cur++;
-		n--;
-	}
-	return (cur);
+	return (0);
 }
 

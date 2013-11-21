@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ref_memset.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 13:25:14 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/21 11:23:57 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/21 11:24:02 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main(void)
 {
-	char	*cur;
+	char	b[10];
+	int i;
+	for (i=0; i<10; i++)
+	{
+		b[i] = '.';
+	}
+	write(1, memset(b, 'z', 8), 10);
+	write(1, "\n", 1);
+	write(1, b, 10);
+	write(1, "\n", 1);
+	for (i=0; i<10; i++)
+	{
+		b[i] = '.';
+	}
+	write(1, memset(b, '@', 5), 10);
+	write(1, "\n", 1);
+	write(1, b, 10);
+	write(1, "\n", 1);
 
-	cur = (char *)s;
-	if (n <= 0)
-	{
-		return (NULL);
-	}
-	while (*cur != c)
-	{
-		if (n <= 0)
-		{
-			return (NULL);
-		}
-		cur++;
-		n--;
-	}
-	return (cur);
+	return (0);
 }
 

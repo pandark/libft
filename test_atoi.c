@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   test_atoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 13:25:14 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/21 11:00:12 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/21 12:38:34 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int main(void)
 {
-	char	*cur;
+	printf("%d\n", ft_atoi("0123"));
+	printf("%d\n", ft_atoi("1230"));
+	printf("%d\n", ft_atoi("+5678"));
+	printf("%d\n", ft_atoi("-7890"));
+	printf("%d\n", ft_atoi("-0987"));
+	printf("%d\n", ft_atoi("+--++-7890"));
+	printf("%d\n", ft_atoi("\v\f\t \n-5437"));
 
-	cur = (char *)s;
-	if (n <= 0)
-	{
-		return (NULL);
-	}
-	while (*cur != c)
-	{
-		if (n <= 0)
-		{
-			return (NULL);
-		}
-		cur++;
-		n--;
-	}
-	return (cur);
+	return (0);
 }
 

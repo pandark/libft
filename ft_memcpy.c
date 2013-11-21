@@ -6,13 +6,13 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 19:21:40 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/21 12:25:24 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*memcpy(void *s1, const void *s2, size_t n)
+void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
 	char	*c1;
 	char	*c2;
