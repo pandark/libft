@@ -6,13 +6,13 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 17:03:43 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 23:35:22 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_stpncpy(char *s1, const char *s2, size_t n)
+char	*ft_strncpy(char *s1, const char *s2, size_t n)
 {
 	(void)s1;
 	(void)s2;
