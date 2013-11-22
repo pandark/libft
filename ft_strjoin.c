@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_isalnum.c                                     :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 19:46:19 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 11:15:01 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 17:38:08 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 17:39:17 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include <stdlib.h>
 
-int main(void)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	printf("a : %d\n", ft_isalnum('a'));
-	printf("z : %d\n", ft_isalnum('z'));
-	printf("h : %d\n", ft_isalnum('h'));
-	printf("0 : %d\n", ft_isalnum('0'));
-	printf("9 : %d\n", ft_isalnum('9'));
-	printf("4 : %d\n", ft_isalnum('4'));
-	printf("%% : %d\n", ft_isalnum('%'));
-	printf("\\t : %d\n", ft_isalnum('\t'));
-	printf("\\0 : %d\n", ft_isalnum('\0'));
-
+	(void)s1;
+	(void)s2;
 	return (0);
 }
 

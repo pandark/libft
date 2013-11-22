@@ -6,8 +6,13 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/19 20:56:56 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 17:02:26 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*ft_strdup(const char *s1)
+{
+	(void)s1;
+	return (0);
+}
 

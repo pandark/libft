@@ -6,20 +6,27 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:05:55 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 15:35:07 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 16:53:27 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stddef.h>
+# include <string.h>
 
-enum	e_sign
+enum				e_sign
 {
 	neg = -1,
 	pos = 1
 };
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

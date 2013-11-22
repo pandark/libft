@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strim.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 16:16:06 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:14:15 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 18:15:30 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+#include <stdlib.h>
+
+char	*ft_strjoin(char const *s)
 {
-	(void)str;
+	(void)s;
 	return (0);
 }
 

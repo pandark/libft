@@ -6,9 +6,17 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 16:04:21 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 17:03:56 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <string.h>
+
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+{
+	(void)s1;
+	(void)s2;
+	(void)n;
+	return (0);
+}
 

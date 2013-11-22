@@ -6,16 +6,13 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/19 19:17:03 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 14:53:34 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isprint(int c)
 {
-	if (c >= 32 && c <= 126)
-	{
-		return (1);
-	}
+	(void)c;
 	return (0);
 }
 

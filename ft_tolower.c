@@ -6,16 +6,13 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 20:58:10 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 17:05:03 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		return (c - 'A' + 'a');
-	}
-	return (c);
+	void(c);
+	return (0);
 }
 

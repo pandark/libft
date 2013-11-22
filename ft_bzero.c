@@ -6,15 +6,15 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:43 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 21:00:51 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 16:54:41 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include "libft.h"
+#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	(void)s;
+	(void)n;
 }
 

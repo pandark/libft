@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_isalpha.c                                     :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 11:07:34 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 11:08:40 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 17:31:12 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 17:34:51 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include <string.h>
+#include <stdlib.h>
 
-int main(void)
+char	*ft_strsub(char const *s, unsigned int start, sizet_t len)
 {
-	printf("a : %d\n", ft_isalpha('a'));
-	printf("z : %d\n", ft_isalpha('z'));
-	printf("h : %d\n", ft_isalpha('h'));
-	printf("0 : %d\n", ft_isalpha('0'));
-	printf("9 : %d\n", ft_isalpha('9'));
-	printf("4 : %d\n", ft_isalpha('4'));
-	printf("%% : %d\n", ft_isalpha('%'));
-	printf("\\t : %d\n", ft_isalpha('\t'));
-	printf("\\0 : %d\n", ft_isalpha('\0'));
-
+	(void)s;
+	(void)start;
+	(void)len;
 	return (0);
 }
 

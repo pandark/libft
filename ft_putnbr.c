@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ref_atoi.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 11:00:06 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 12:35:52 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:20:53 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 18:21:54 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
-int main(void)
+void	ft_putnbr(int n)
 {
-	printf("%d\n", atoi("0123"));
-	printf("%d\n", atoi("1230"));
-	printf("%d\n", atoi("+5678"));
-	printf("%d\n", atoi("-7890"));
-	printf("%d\n", atoi("-0987"));
-	printf("%d\n", atoi("+--++-7890"));
-	printf("%d\n", atoi("\v\f\t \n-5437"));
-
-	return (0);
+	(void)n;
 }
-

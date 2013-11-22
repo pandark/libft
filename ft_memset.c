@@ -6,23 +6,17 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 20:56:12 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 15:58:59 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 17:00:32 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*cur;
-
-	cur = (unsigned char *)b;
-	while (len > 0)
-	{
-		*cur = (unsigned char)c;
-		cur++;
-		len--;
-	}
-	return b;
+	(void)b;
+	(void)c;
+	(void)len;
+	return (0);
 }
 

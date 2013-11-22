@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 16:16:06 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:28:54 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 18:29:39 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	(void)str;
-	return (0);
-}
+#include <unistd.h>
 
+void	ft_putnbr_fd(int n, int fd)
+{
+	(void)n;
+	(void)fd;
+}

@@ -6,7 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 13:17:38 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 17:01:25 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+char	*ft_strcat(char *s1, const char *s2)
+{
+	(void)s1;
+	(void)s2;
+	return (0);
+}
 

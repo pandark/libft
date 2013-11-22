@@ -6,9 +6,17 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/20 16:03:48 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 17:02:59 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <string.h>
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	(void)dst;
+	(void)src;
+	(void)size;
+	return (0);
+}
 

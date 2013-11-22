@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_atoi.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 11:00:12 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/21 12:38:34 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:23:12 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 18:24:02 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include <unistd.h>
 
-int main(void)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	printf("%d\n", ft_atoi("0123"));
-	printf("%d\n", ft_atoi("1230"));
-	printf("%d\n", ft_atoi("+5678"));
-	printf("%d\n", ft_atoi("-7890"));
-	printf("%d\n", ft_atoi("-0987"));
-	printf("%d\n", ft_atoi("+--++-7890"));
-	printf("%d\n", ft_atoi("\v\f\t \n-5437"));
-
-	return (0);
+	(void)s;
+	(void)fd;
 }
 

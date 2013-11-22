@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 16:16:06 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 17:41:45 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 18:16:56 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+#include <stdlib.h>
+
+char	**ft_strsplit(char const *s, char c)
 {
-	(void)str;
+	(void)s;
+	(void)c;
 	return (0);
 }
 

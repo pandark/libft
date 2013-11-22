@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 16:16:06 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:27:45 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/22 18:28:42 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+#include <unistd.h>
+
+void	ft_putendl_fd(char const *s, int fd)
 {
-	(void)str;
-	return (0);
+	(void)s;
+	(void)fd;
 }
 
