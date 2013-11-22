@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 16:30:43 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 18:43:26 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+	(void)s1;
 	(void)s2;
 	(void)n;
 	return (0);
