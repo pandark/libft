@@ -6,14 +6,21 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 17:01:41 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/22 23:25:38 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_stpcpy(char *s1, const char *s2)
 {
-	(void)s1;
-	(void)s2;
-	return (0);
+	int		cur;
+
+	cur = 0;
+	while (s2[cur] != '\0')
+	{
+		s1[cur] = s2[cur];
+		cur++;
+	}
+	s1[cur] = s2[cur];
+	return (s1);
 }
 
