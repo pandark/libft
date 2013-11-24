@@ -6,16 +6,22 @@
 #    By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 14:09:58 by apachkof          #+#    #+#              #
-#    Updated: 2013/11/22 18:48:13 by apachkof         ###   ########.fr        #
+#    Updated: 2013/11/24 20:55:33 by apachkof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
+
 CC=gcc
+
 CFLAGS=-Wall -Wextra -Werror
+
 RM=rm -f
+
 LDFLAGS=-L.
+
 LDLIBS=-lft
+
 SRC=ft_memset.c \
 ft_bzero.c \
 ft_memcpy.c \
@@ -68,6 +74,7 @@ ft_putchar_fd.c \
 ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c
+
 OBJ=$(SRC:.c=.o)
 
 $(NAME): libft.h
