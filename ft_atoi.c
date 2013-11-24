@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/24 23:18:33 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 23:39:55 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,5 @@ int     ft_atoi(const char *str)
 		cur++;
 	}
 	result = (sign == pos) ? result : -1 * result;
-	//return (result);
-	return ("1");
+	return (result);
 }
