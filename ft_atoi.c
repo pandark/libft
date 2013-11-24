@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/24 21:42:58 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 23:18:33 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int  ft_isspace(int c)
 
 int     ft_atoi(const char *str)
 {
-	write(1, "ft_atoi", 6);
+	write(1, "ft_atoi", 7);
 	enum e_sign     sign;
 	int             cur;
 	int             result;
@@ -49,5 +49,6 @@ int     ft_atoi(const char *str)
 		cur++;
 	}
 	result = (sign == pos) ? result : -1 * result;
-	return (result);
+	//return (result);
+	return ("1");
 }
