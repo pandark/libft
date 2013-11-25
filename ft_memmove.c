@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 13:16:31 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 18:02:49 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static void		*ft_memcpy_bwd(void *s1, const void *s2, size_t n)
 	char	*c1;
 	char	*c2;
 
-	c1 = (char *s1);
-	c2 = (char *s2);
+	c1 = (char *)s1;
+	c2 = (char *)s2;
 	cur = n - 1;
 	while (cur >= 0)
 	{

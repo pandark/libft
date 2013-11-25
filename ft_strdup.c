@@ -6,12 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 13:35:12 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 18:04:02 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
+
+#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
