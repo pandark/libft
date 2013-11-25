@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 17:20:59 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 17:22:04 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 14:43:03 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_strdel(char **as)
 {
-	(void)as;
+	if (as != NULL && *as != NULL)
+	{
+		free(*as);
+	}
+	*as = NULL;
 }
 

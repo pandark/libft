@@ -6,13 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 18:20:53 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 18:21:54 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 00:32:39 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 void	ft_putnbr(int n)
 {
-	(void)n;
+	ft_putnbr_fd(n, 1);
 }

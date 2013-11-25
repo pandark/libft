@@ -6,14 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 17:44:36 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 17:47:12 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 00:25:27 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar(char c)
 {
-	(void)c;
+	ft_putchar_fd(c, 1);
 }
 

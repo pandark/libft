@@ -6,13 +6,20 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 14:53:34 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 23:04:28 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int		ft_isprint(int c)
 {
-	(void)c;
+	write(1, "ft_memset", 9);
+
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
 	return (0);
 }
 

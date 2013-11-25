@@ -6,13 +6,19 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:45 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 14:52:42 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 22:55:04 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int		ft_isalpha(int c)
 {
-	(void)c;
+	write(1, "ft_isalpha", 10);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
 	return (0);
 }
 

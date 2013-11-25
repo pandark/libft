@@ -6,13 +6,16 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 17:05:23 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/23 01:00:29 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_toupper(int c)
 {
-	(void)c;
-	return (0);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 'a' + 'A');
+	}
+	return (c);
 }
 

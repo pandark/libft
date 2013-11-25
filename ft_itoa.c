@@ -6,14 +6,17 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 17:43:41 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 17:44:15 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 23:07:26 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 #include <stdlib.h>
 
 char	*ft_itoa(int n)
 {
+	write(1, "ft_itoa", 7);
 	(void)n;
 	return (0);
 }

@@ -6,17 +6,29 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 16:59:16 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 12:58:50 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 #include <string.h>
 
 void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
-	(void)s1;
-	(void)s2;
-	(void)n;
-	return (0);
+	write(1, "ft_memcpy", 9);
+	int		cur;
+	char	*c1;
+	char	*c2;
+
+	c1 = (char *s1);
+	c2 = (char *s2);
+	cur = 0;
+	while (cur < n)
+	{
+		c1[cur] = c2[cur];
+		cur++;
+	}
+	return (s1);
 }
 

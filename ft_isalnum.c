@@ -6,13 +6,21 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:44 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 14:52:17 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 22:54:23 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int		ft_isalnum(int c)
 {
-	(void)c;
+	write(1, "ft_isalnum", 10);
+	if ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
+	{
+		return (1);
+	}
 	return (0);
 }
 

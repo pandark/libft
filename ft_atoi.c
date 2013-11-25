@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/24 23:39:55 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/24 23:23:05 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "libft.h"
 
-static int  ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if (c == '\t'
 		|| c == '\n'
@@ -28,12 +28,12 @@ static int  ft_isspace(int c)
 	return (0);
 }
 
-int     ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
 	write(1, "ft_atoi", 7);
-	enum e_sign     sign;
-	int             cur;
-	int             result;
+	enum e_sign		sign;
+	int				cur;
+	int				result;
 
 	cur = 0;
 	result = 0;
@@ -51,3 +51,4 @@ int     ft_atoi(const char *str)
 	result = (sign == pos) ? result : -1 * result;
 	return (result);
 }
+
