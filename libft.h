@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:05:55 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/22 21:37:01 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 21:30:08 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
-char	*ft_strstr(const char *s, int c);
+char	*ft_strstr(const char *s1, const char *s2);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_memalloc(size_t size);
