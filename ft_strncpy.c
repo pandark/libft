@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 13:51:26 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 21:36:24 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strncpy(char *s1, const char *s2, size_t n)
 		cur++;
 	}
 	s1[cur] = '\0';
-	while (cur < n)
+	while (n < 0 && cur < n)
 	{
 		s1[cur] = '\0';
 		cur++;
