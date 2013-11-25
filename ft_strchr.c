@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 18:46:28 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 19:26:34 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ char	*ft_strchr(const char *s, int c)
 
 	str = (char *)s;
 	cur = 0;
-	while (str[cur] != '\0')
+	while (str[cur] != c)
 	{
-		if (str[cur] == c)
+		if (str[cur] == '\0')
 		{
-			return (str + cur);
+			return (NULL);
 		}
 		cur++;
 	}
-	return (NULL);
+	return (str + cur);
 }
 
