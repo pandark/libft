@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 00:01:47 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/25 19:19:28 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,17 @@
 int		ft_strcmp(const char *s1, const char *s2)
 {
 	write(1, "ft_strcmp", 9);
-	(void)s1;
-	(void)s2;
-	return (0);
+	int		cur;
+
+	cur = 0;
+	while (s1[cur] != '\0' && s2[cur] != '\0')
+	{
+		if (s1[cur] != s2[cur])
+		{
+			return (s1[cur] - s2[cur]);
+		}
+		cur++;
+	}
+	return (s1[cur] - s2[cur]);
 }
 
