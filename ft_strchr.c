@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/26 14:30:38 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/26 21:20:15 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (*str == '\0')
 		{
-			return ((*str == '\0') ? str : NULL);
+			return (NULL);
 		}
 		str++;
 	}
