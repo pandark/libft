@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/24 23:04:28 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/26 21:25:52 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isprint(int c)
 {
-	write(1, "ft_memset", 9);
+	write(1, "ft_isprint", 10);
 
 	if (c >= 32 && c <= 126)
 	{
