@@ -6,17 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/26 16:14:37 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 22:03:33 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include <string.h>
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	write(1, "ft_memcmp", 9);
 	size_t	cur;
 	char	*c1;
 	char	*c2;

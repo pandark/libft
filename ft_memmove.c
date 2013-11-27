@@ -6,11 +6,9 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 18:02:49 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 22:02:53 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include "libft.h"
 #include <string.h>
@@ -34,7 +32,6 @@ static void		*ft_memcpy_bwd(void *s1, const void *s2, size_t n)
 
 void			*ft_memmove(void *s1, const void *s2, size_t n)
 {
-	write(1, "ft_memmove", 10);
 	if (s1 < s2)
 		return (ft_memcpy(s1, s2, n));
 	if (s1 > s2)

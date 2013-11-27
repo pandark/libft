@@ -6,11 +6,9 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/24 23:23:05 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 21:56:11 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include "libft.h"
 
@@ -30,7 +28,6 @@ static int	ft_isspace(int c)
 
 int		ft_atoi(const char *str)
 {
-	write(1, "ft_atoi", 7);
 	enum e_sign		sign;
 	int				cur;
 	int				result;

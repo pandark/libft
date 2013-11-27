@@ -6,17 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 19:20:47 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 22:07:34 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include <string.h>
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	write(1, "ft_strncmp", 10);
 	size_t	cur;
 
 	cur = 0;

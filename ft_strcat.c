@@ -6,15 +6,12 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 13:56:59 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 22:05:11 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 char	*ft_strcat(char *s1, const char *s2)
 {
-	write(1, "ft_strcat", 9);
 	char	*cur1;
 	char	*cur2;
 

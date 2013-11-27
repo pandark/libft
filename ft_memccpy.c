@@ -6,17 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 13:11:13 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 22:02:23 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include <string.h>
 
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
-	write (1, "ft_memccpy", 10);
 	char	*c1;
 	char	*c2;
 	size_t	cur;
@@ -38,6 +35,5 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 		cur++;
 	}
 	return (NULL);
-
 }
 

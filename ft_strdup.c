@@ -6,18 +6,15 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 18:04:02 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 22:04:20 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include "libft.h"
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
-	write(1, "ft_strdup", 9);
 	char	*new_str;
 
 	new_str = (char *)malloc(sizeof(new_str) * ft_strlen(s1));

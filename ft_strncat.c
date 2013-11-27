@@ -6,17 +6,14 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 18:20:03 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 22:05:22 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include <string.h>
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	write(1, "ft_strncat", 10);
 	char	*cur;
 
 	cur = s1;

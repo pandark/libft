@@ -6,15 +6,12 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/24 22:55:45 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 21:56:57 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int		ft_isascii(int c)
 {
-	write(1, "ft_isascii", 10);
 	if (c >= 0 && c <= 127)
 	{
 		return (1);
