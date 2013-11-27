@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/26 21:35:15 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/27 17:12:12 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
+	/*
 	write(1, "ft_strnstr", 10);
 	char	*cur;
 	size_t	len1;
@@ -40,5 +41,10 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		n--;
 	}
 	return (NULL);
+	*/
+	(void)s1;
+	(void)s2;
+	(void)n;
+	return ("qwertyuiop");
 }
 
