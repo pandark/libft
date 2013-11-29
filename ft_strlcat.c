@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/29 19:30:27 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/29 19:31:15 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
 */
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-	const char	*psrc;
-	size_t		n;
-	size_t		dst_len;
+	char	*psrc;
+	size_t	n;
+	size_t	dst_len;
 
 	psrc = src;
 	dst_len = (dst - (char *)ft_memchr(dst, '\0', size));
