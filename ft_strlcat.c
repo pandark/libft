@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/28 17:28:06 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/29 14:27:57 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
 	cur = (char *)ft_memchr(dst, '\0', size);
 	if (cur == NULL)
 		return (size);
-	len = cur - dst + ft_strlen(src);
 	reader = (char *)src;
-	while (cur < dst + size && *reader != '\0')
+	len = cur - dst + ft_strlen(reader);
+	while (cur - dst < size && *reader != '\0')
 	{
 		*cur = *reader;
 		cur++;
