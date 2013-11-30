@@ -6,17 +6,18 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 17:16:04 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/24 23:29:50 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/30 04:07:53 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 #include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {
-	write(1, "ft_memdel", 9);
-	(void)ap;
+	if (ap != NULL && *ap != NULL)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }
 
