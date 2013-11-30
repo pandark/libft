@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/30 00:38:35 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/30 06:21:40 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	len2;
 	int		result;
 
-	len = ft_strlen(s1) + 1;
-	len2 = ft_strlen(s2) + 1;
+	len = ft_strlen(s1);
+	len2 = ft_strlen(s2);
 	len = (len <= len2) ? len : len2;
 	len = (len <= n) ? len : n;
 	result = ft_memcmp(s1, s2, len);
