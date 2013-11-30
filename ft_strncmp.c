@@ -6,29 +6,24 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:07:34 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/30 00:38:35 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	cur;
+	size_t	len;
+	size_t	len2;
+	int		result;
 
-	cur = 0;
-	if (n <= 0)
-	{
-		return (0);
-	}
-	while (s1[cur] != '\0' && s2[cur] != '\0' && cur < n - 1)
-	{
-		if (s1[cur] != s2[cur])
-		{
-			return (s1[cur] - s2[cur]);
-		}
-		cur++;
-	}
-	return (s1[cur] - s2[cur]);
+	len = ft_strlen(s1) + 1;
+	len2 = ft_strlen(s2) + 1;
+	len = (len <= len2) ? len : len2;
+	len = (len <= n) ? len : n;
+	result = ft_memcmp(s1, s2, len);
+	return (result);
 }
 

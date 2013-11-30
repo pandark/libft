@@ -6,7 +6,7 @@
 #    By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 14:09:58 by apachkof          #+#    #+#              #
-#    Updated: 2013/11/24 20:55:33 by apachkof         ###   ########.fr        #
+#    Updated: 2013/11/30 02:54:38 by apachkof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,6 +92,5 @@ fclean: clean
 
 re: fclean all
 
-test:
-	$(CC) $(LDFLAGS) $(LDLIBS) main.c
+.PHONY: clean fclean
 

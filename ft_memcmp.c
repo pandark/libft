@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:33 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/30 00:31:58 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	cur;
-	char	*c1;
-	char	*c2;
+	size_t		cur;
+	const char	*str1;
+	const char	*str2;
 
+	str1 = (const char *)s1;
+	str2 = (const char *)s2;
 	cur = 0;
-	c1 = (char *)s1;
-	c2 = (char *)s2;
-	while (cur < n)
+	while (cur <= n)
 	{
-		if (c1[cur] != c2[cur])
-		{
-			return (c1[cur] - c2[cur]);
-		}
+		if (str1[cur] != str2[cur])
+			return (str1[cur] - str2[cur]);
 		cur++;
 	}
 	return (0);
