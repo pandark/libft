@@ -6,13 +6,15 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 23:32:32 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:04:39 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/30 17:47:17 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 char	*ft_strcpy(char *s1, const char *s2)
 {
-	int		cur;
+	size_t	cur;
 
 	cur = 0;
 	while (s2[cur] != '\0')
@@ -20,7 +22,7 @@ char	*ft_strcpy(char *s1, const char *s2)
 		s1[cur] = s2[cur];
 		cur++;
 	}
-	s1[cur] = s2[cur];
+	s1[cur] = '\0';
 	return (s1);
 }
 
