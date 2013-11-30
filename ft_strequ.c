@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 17:28:38 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 00:17:09 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/11/30 03:53:25 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
-	if (ft_strcmp(s1, s2) != 0)
-	{
-		return (0);
-	}
-	return (1);
+	return (!ft_strcmp(s1, s2));
 }
 
