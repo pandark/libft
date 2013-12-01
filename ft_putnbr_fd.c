@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:55 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:28:54 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/30 03:47:04 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t		len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+	ft_putstr_fd(ft_itoa(n), fd);
 }

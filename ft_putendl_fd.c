@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:55 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:27:45 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/30 03:45:21 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	size_t		len;
-
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

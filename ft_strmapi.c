@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:55 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 17:27:42 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/01 19:41:16 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t		len;
-
-	len = 0;
-	while (s[len] != '\0')
+	char	*str;
+	size_t	i;
+	
+	str = ft_strdup((const char *)s);
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (str[i] != 0)
 	{
-		len++;
+		str[i] = f((unsigned int)i, str[i]);
+		i++;
 	}
-	return (len);
+	return (str);
 }

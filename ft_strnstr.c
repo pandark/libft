@@ -6,12 +6,12 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:49 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/30 19:56:18 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/01 14:22:59 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
@@ -28,4 +28,3 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	}
 	return (NULL);
 }
-

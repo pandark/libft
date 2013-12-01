@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/30 17:26:37 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/01 20:06:02 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ char	*ft_strdup(const char *s1)
 {
 	char	*new_str;
 
-	new_str = (char *)malloc(sizeof(new_str) * (ft_strlen(s1) + 1));
+	new_str = (char *)malloc(sizeof(*new_str) * (ft_strlen(s1) + 1));
 	if (new_str == NULL)
 		return (NULL);
 	return (ft_strcpy(new_str, s1));
 }
-

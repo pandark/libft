@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchrcnt.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:55 by apachkof         ###   ########.fr       */
+/*   Created: 2013/12/01 15:11:47 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/01 15:13:44 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strchrcnt(const char *s, char c)
 {
-	size_t		len;
+	size_t	occ;
 
-	len = 0;
-	while (s[len] != '\0')
+	occ = 0;
+	while (*s != '\0')
 	{
-		len++;
+		if (*s == c)
+			occ++;
+		s++;
 	}
-	return (len);
+	return (occ);
 }
+

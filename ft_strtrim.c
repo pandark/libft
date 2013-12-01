@@ -6,50 +6,60 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 17:40:04 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/25 00:24:34 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/01 20:53:26 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <string.h>
+#include "libft.h"
 
-static int	ft_trimlen(char *s)
+static size_t	ft_trimlen(char *s)
 {
-	int		i;
+	size_t	i;
+	size_t	spaces;
+	size_t	len;
 
+	len = ft_strlen(s);
 	i = 0;
-	while(s[i] != '\0')
+	while(s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 	{
-		if(s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
+		i++;
+	}
+	spaces = i;
+	if(s[i] != '\0')
+	{
+		i = len - 1;
+		while(s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		{
-			i++;
+			i--;
+			spaces++;
 		}
 	}
-	return (i);
+	return (len - spaces);
 }
 
 char		*ft_strtrim(char const *s)
 {
 	char	*str;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
+	size_t	trim_len;
 
 	i = 0;
 	j = 0;
-	str = (char *)malloc(sizeof(str) * ft_trimlen((char *)s));
+	trim_len = ft_trimlen((char *)s);
+	str = (char *)malloc(sizeof(*str) * (trim_len + 1));
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-	while(s[i] != '\0')
+	while(s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		i++;
+	while(j < trim_len)
 	{
-		if(s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
-		{
-			str[j] = s[i];
-			j++;
-		}
+		str[j] = s[i];
+		j++;
 		i++;
 	}
 	str[j] = '\0';
 	return (str);
 }
-

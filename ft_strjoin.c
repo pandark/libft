@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:55 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 17:38:08 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/01 20:09:58 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		len;
+	char	*str;
+	int		len;
 
-	len = 0;
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	str = (char *)malloc(sizeof(*str) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	ft_strcpy(str, s1);
+	ft_strcat(str, s2);
+	return (str);
 }

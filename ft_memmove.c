@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <string.h>
+#include "libft.h"
 
 static void		*ft_memcpy_bwd(void *s1, const void *s2, size_t n)
 {
@@ -38,4 +38,3 @@ void			*ft_memmove(void *s1, const void *s2, size_t n)
 		return (ft_memcpy_bwd(s1, s2, n));
 	return (s1);
 }
-

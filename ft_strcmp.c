@@ -25,4 +25,3 @@ int		ft_strcmp(const char *s1, const char *s2)
 	result = ft_memcmp(s1, s2, len);
 	return (result);
 }
-

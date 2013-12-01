@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:55 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 18:23:12 by apachkof          #+#    #+#             */
+/*   Updated: 2013/11/25 17:57:33 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t		len;
+	int		i;
 
-	len = 0;
-	while (s[len] != '\0')
+	i = 0;
+	while (s + i != NULL && s[i] != '\0')
 	{
-		len++;
+		ft_putchar_fd(s[i], fd);
+		i++;
 	}
-	return (len);
 }

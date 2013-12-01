@@ -48,4 +48,3 @@ int		ft_atoi(const char *str)
 	result = (sign == pos) ? result : -1 * result;
 	return (result);
 }
-

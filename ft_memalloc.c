@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:03:55 by apachkof         ###   ########.fr       */
+/*   Created: 2013/11/22 17:13:54 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/01 19:49:01 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <string.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_memalloc(size_t size)
 {
-	size_t		len;
+	char	*t;
+	size_t	i;
 
-	len = 0;
-	while (s[len] != '\0')
+	t = malloc(size);
+	if (t == NULL)
 	{
-		len++;
+		return (NULL);
 	}
-	return (len);
+	i = 0;
+	while (i < size)
+	{
+		t[i] = 0;
+		i++;
+	}
+	return (t);
 }
