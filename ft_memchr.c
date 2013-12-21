@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/30 01:20:45 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/21 13:08:21 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*cur;
+	unsigned char	*cur;
 
-	cur = (char *)s;
-	while (n-- > 0)
+	cur = (unsigned char *)s;
+	while (n--)
 	{
 		if (*cur == c)
-		{
 			return (cur);
-		}
-		cur++;
+		if (n)
+			cur++;
 	}
 	return (NULL);
 }

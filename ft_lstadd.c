@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/21 09:27:09 by apachkof         ###   ########.fr       */
+/*   Created: 2013/12/19 10:44:53 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/21 07:40:46 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+void	ft_lstadd(t_list **start, t_list *link)
 {
-	if (s1 < s2)
-		return (ft_memcpy(s1, s2, n));
-	if (s1 > s2)
-		return (ft_memcpy_bwd(s1, s2, n));
-	return (s1);
+	if (*start != NULL)
+		link->next = *start;
+	*start = link;
 }

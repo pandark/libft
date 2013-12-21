@@ -6,20 +6,32 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:05:55 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/01 23:38:13 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/21 14:07:45 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
-
-enum				e_sign
+typedef enum		e_bool
 {
-	neg = -1,
-	pos = 1
-};
+	false,
+	true
+}					t_bool;
+
+typedef struct		s_str
+{
+	char			*s;
+	size_t			l;
+}					t_str;
+
+typedef struct		s_glist
+{
+	void			*content;
+	struct s_glist	*next;
+}					t_glist;
 
 typedef struct		s_list
 {
@@ -30,16 +42,18 @@ typedef struct		s_list
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isascii(int c);
-int		ft_isdigit(int c);
-int		ft_isprint(int c);
-void	*ft_memccpy(void *s1, const void *s2, int c, \
-		size_t n);
+t_bool	ft_isspace(int c);
+t_bool	ft_isalnum(int c);
+t_bool	ft_isalpha(int c);
+t_bool	ft_isascii(int c);
+t_bool	ft_isdigit(int c);
+t_bool	ft_isprint(int c);
+char	*ft_memnew(size_t size);
+void	*ft_memccpy(void *s1, const void *s2, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *s1, const void *s2, size_t n);
+void	*ft_memcpy_bwd(void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *s1, const void *s2, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 char	*ft_strcat(char *s1, const char *s2);
@@ -81,6 +95,36 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_str	*ft_itot_str(int n);
+void	ft_t_strcat(t_str *s1, t_str *s2);
+char	*ft_t_strchr(t_str *str, char c);
+int		ft_t_strcmp(t_str *str1, t_str *str2);
+void	ft_t_strcpy(t_str *str, t_str *orig);
+t_str	*ft_t_strcutchr(t_str *str, char c);
+void	ft_t_strdel(t_str **str);
+t_str	*ft_t_strdup(t_str *orig);
+t_str	*ft_t_strjoin(t_str *s1, t_str *s2);
+t_str	*ft_t_strnew(char *s, size_t size);
+t_str	*ft_t_strsub(t_str *str, size_t start, size_t size);
+int		ft_t_strtoi(t_str *str);
+char	*ft_t_strtostr(t_str *str);
 t_list	*ft_lstnew(void const *content, size_t content_size);
+void	ft_lstdelone(t_list **link, void (*del)(void *, size_t));
+void	ft_lstdel(t_list **link, void (*del)(void *, size_t));
+void	ft_lstadd(t_list **start, t_list *link);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_glist	*ft_glstcpy(t_glist *link);
+void	ft_glstdel(t_glist **start, void (*del)(void **ct));
+void	ft_glstdelone(t_glist **link, void (*del)(void **ct));
+t_glist	*ft_glstdup(t_glist *orig, void *(*new)(void *ct), \
+void (*del)(void **ct));
+t_glist	*ft_glstget(t_glist *start, int n);
+t_glist	*ft_glstget2d(t_glist *start, int i, int j);
+void	ft_glstiter(t_glist *lst, void (*f)(t_glist *elem));
+t_glist	*ft_glstmap(t_glist *lst, t_glist *(*f)(t_glist *elem));
+t_glist	*ft_glstnew(void *ct, void *(*new)(void *ct), void (*del)(void **ct));
+void	ft_glstpush(t_glist **start, t_glist *link);
+int		ft_getnextline(int const fd, t_str **line);
 
-#endif
+#endif /* !LIBFT_H */

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_glstdel.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/21 09:27:09 by apachkof         ###   ########.fr       */
+/*   Created: 2013/12/21 08:25:51 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/21 09:47:03 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+void	ft_glstdel(t_glist **start, void (*del)(void **ct))
 {
-	if (s1 < s2)
-		return (ft_memcpy(s1, s2, n));
-	if (s1 > s2)
-		return (ft_memcpy_bwd(s1, s2, n));
-	return (s1);
+	t_glist	*next;
+
+	while (*start != NULL)
+	{
+		next = (*start)->next;
+		ft_glstdelone(start, del);
+		*start = next;
+	}
 }

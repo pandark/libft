@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_glstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/21 09:27:09 by apachkof         ###   ########.fr       */
+/*   Created: 2013/12/21 10:17:31 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/21 10:18:10 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+t_glist	*ft_glstnew(void *ct, void *(*new)(void *ct), void (*del)(void **ct))
 {
-	if (s1 < s2)
-		return (ft_memcpy(s1, s2, n));
-	if (s1 > s2)
-		return (ft_memcpy_bwd(s1, s2, n));
-	return (s1);
+	void	*content;
+	t_glist	*new_link;
+
+	if ((content = new(ct)) == NULL)
+		return (NULL);
+	if ((new_link = (t_glist *)malloc(sizeof(*new_link))) == NULL)
+	{
+		del(&content);
+		return (NULL);
+	}
+	new_link->content = content;
+	new_link->next = NULL;
+	return (new_link);
 }
+

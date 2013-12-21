@@ -6,45 +6,29 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:10 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 21:56:11 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/21 10:07:57 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c)
+int			ft_atoi(const char *str)
 {
-	if (c == '\t'
-		|| c == '\n'
-		|| c == '\v'
-		|| c == '\f'
-		|| c == '\r'
-		|| c == ' ')
-	{
-		return (1);
-	}
-	return (0);
-}
+	int		sign;
+	char	*cur;
+	int		result;
 
-int		ft_atoi(const char *str)
-{
-	enum e_sign		sign;
-	int				cur;
-	int				result;
-
-	cur = 0;
 	result = 0;
-	while (ft_isspace(str[cur]) == 1)
+	cur = (char *)str;
+	while (ft_isspace(*cur))
+		cur++;
+	sign = (*cur == '-') ? -1 : 1;
+	cur = (*cur == '+' || *cur == '-') ? cur + 1 : cur;
+	while (*cur >= '0' && *cur <= '9')
 	{
+		result = result * 10 + *cur - 48;
 		cur++;
 	}
-	sign = (str[cur] == '-') ? neg : pos;
-	cur += (str[cur] == '+' || str[cur] == '-') ? 1 : 0;
-	while (str[cur] >= '0' && str[cur] <= '9')
-	{
-		result = result * 10 + str[cur] - 48;
-		cur++;
-	}
-	result = (sign == pos) ? result : -1 * result;
+	result *= sign;
 	return (result);
 }

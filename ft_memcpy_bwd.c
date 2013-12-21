@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy_bwd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/21 09:27:09 by apachkof         ###   ########.fr       */
+/*   Created: 2013/12/20 19:00:07 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/21 11:45:26 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+void	*ft_memcpy_bwd(void *s1, const void *s2, size_t n)
 {
-	if (s1 < s2)
-		return (ft_memcpy(s1, s2, n));
-	if (s1 > s2)
-		return (ft_memcpy_bwd(s1, s2, n));
+	char	*c1;
+	char	*c2;
+
+	if (n == 0 || s1 == s2)
+		return (s1);
+	c1 = (char *)s1;
+	c2 = (char *)s2;
+	while (n--)
+	{
+		c1[n] = c2[n];
+	}
 	return (s1);
 }

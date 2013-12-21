@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_glstdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/21 09:27:09 by apachkof         ###   ########.fr       */
+/*   Created: 2013/12/21 12:57:31 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/21 13:02:57 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+t_glist	*ft_glstdup(t_glist *orig, void *(*new)(void *ct), void (*del)(void **ct))
 {
-	if (s1 < s2)
-		return (ft_memcpy(s1, s2, n));
-	if (s1 > s2)
-		return (ft_memcpy_bwd(s1, s2, n));
-	return (s1);
+	t_glist		*new_link;
+
+	new_link = ft_glstnew(orig->content, new, del);
+	return (new_link);
 }

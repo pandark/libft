@@ -6,15 +6,17 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:45 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 21:56:49 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/21 09:58:59 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(int c)
+#include "libft.h"
+
+t_bool	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		return (1);
+		return (true);
 	}
-	return (0);
+	return (false);
 }

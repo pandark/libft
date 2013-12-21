@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 20:56:12 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:01:33 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/21 09:29:25 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*cur;
 
+	if (len == 0)
+		return (b);
 	cur = (unsigned char *)b;
-	while (len > 0)
+	while (len--)
 	{
 		*cur = (unsigned char)c;
-		cur++;
-		len--;
+		if (len)
+			cur++;
 	}
-	return b;
+	return (b);
 }

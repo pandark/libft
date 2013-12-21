@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/01 23:06:14 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/01 23:27:47 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/21 07:33:31 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,25 @@
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list	*link;
+	t_list	*new;
 
-	link = (t_list *)malloc(sizeof(*link));
-	if (link == NULL)
+	if ((new = (t_list *)malloc(sizeof(*new))) == NULL)
 		return (NULL);
-	link->next = NULL;
-	if (content != NULL)
+	if (content == NULL)
 	{
-		link->content = malloc(content_size);
-		if (link->content == NULL)
-			return (NULL);
-		ft_memcpy(link->content, content, content_size);
-		link->content_size = content_size;
+		new->content = NULL;
+		new->content_size = 0;
 	}
 	else
 	{
-		link->content = NULL;
-		link->content_size = 0;
+		if ((new->content = malloc(content_size)) == NULL)
+		{
+			free(new);
+			return (NULL);
+		}
+		ft_memcpy(new->content, content, content_size);
+		new->content_size = content_size;
 	}
+	new->next = NULL;
+	return (new);
 }

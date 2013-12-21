@@ -6,7 +6,7 @@
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:38:48 by apachkof          #+#    #+#             */
-/*   Updated: 2013/11/27 22:02:01 by apachkof         ###   ########.fr       */
+/*   Updated: 2013/12/21 09:37:02 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 
 void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
-	size_t	cur;
 	char	*c1;
 	char	*c2;
 
+	if (n == 0 || s1 == s2)
+		return (s1);
 	c1 = (char *)s1;
 	c2 = (char *)s2;
-	cur = 0;
-	while (cur < n)
-	{
-		c1[cur] = c2[cur];
-		cur++;
-	}
+	while (--n)
+		*c1++ = *c2++;
+	*c1 = *c2;
 	return (s1);
 }
