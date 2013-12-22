@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_glstdelone.c                                    :+:      :+:    :+:   */
+/*   ft_tests.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apachkof <apachkof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/21 08:28:17 by apachkof          #+#    #+#             */
-/*   Updated: 2013/12/22 04:35:09 by apachkof         ###   ########.fr       */
+/*   Created: 2013/12/22 04:16:08 by apachkof          #+#    #+#             */
+/*   Updated: 2013/12/22 04:50:41 by apachkof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#ifndef FT_TESTS_H
+# define FT_TESTS_H
 
-void	ft_glstdelone(t_glist **link, void (*del)(void **ct))
+typedef enum		e_bool
 {
-	if (del != NULL)
-		del(&((*link)->content));
-	free(*link);
-	*link = NULL;
-}
+	false,
+	true
+}					t_bool;
+
+t_bool	ft_isspace(int c);
+t_bool	ft_isalnum(int c);
+t_bool	ft_isalpha(int c);
+t_bool	ft_isascii(int c);
+t_bool	ft_isdigit(int c);
+t_bool	ft_isprint(int c);
+
+#endif /* !FT_TESTS_H */
